@@ -16,7 +16,7 @@ Import and access the virtual machine
 3. start the machine
 	
 Verify ip with "ip r" 
-	Machine IP = 192.168.0.33
+	Machine IP = <your ip>
 
 4. Access the virtual machine using the following user and password. You can use the virtualization platform or access it via SSH.
 
@@ -56,8 +56,8 @@ Wazuh dashboard:
 Win 11 IP : 192.168.0.174
 Wazuh Server IP :192.168.0.224
  
-1. Command to get Agent on the target Computer (need powershell 3.0)
-Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.5.1-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER='192.168.0.224' WAZUH_REGISTRATION_SERVER='192.168.0.224' WAZUH_AGENT_GROUP='WindowsPCs' WAZUH_AGENT_NAME='Win11_Home' 
+1. Command to get Agent on the target Computer (need powershell 3.0) (MAKE SURE TO CHANGE SERVER_IP TO YOURS)
+Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.5.1-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER='192.168.0.224' WAZUH_REGISTRATION_SERVER='<SERVER_IP>' WAZUH_AGENT_GROUP='WindowsPCs' WAZUH_AGENT_NAME='Win11_Home' 
 
 2. Start the agent with NET START Wazuh 
 
