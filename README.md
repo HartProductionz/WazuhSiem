@@ -84,7 +84,9 @@ Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.5.1-
 
 				Vulnerabilities 
 1. Not enabled on default 
-2. How to set it up : 
+2. How to set it up :
+3. Go to Configuration
+4. Make your way over to line 104 and change it to from "no < "yes" under Vulnerabilty Detector
 	
 
 
